@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "9b44d849-312f-48cc-91c6-20615416461f",
+		"name": "Repasinho(30-08-2025)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28687138"
+	},
+	"item": [
+		{
+			"name": "HOLA_MUNDO",
+			"item": [
+				{
+					"name": "200 - HolaMundo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREAR_CLIENTE",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nombre\": \"Jacinto\",\r\n   \"cedula\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/clientes/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"clientes",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EJERCICIO_EXPERTO_JAVA",
+			"item": [
+				{
+					"name": "200 - Obtener producto mas barato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/experto/ejercicio1_1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experto",
+								"ejercicio1_1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Saber si determinado cliente compró x producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/experto/ejercicio1_2?posCliente=1&posProducto=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experto",
+								"ejercicio1_2"
+							],
+							"query": [
+								{
+									"key": "posCliente",
+									"value": "1"
+								},
+								{
+									"key": "posProducto",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener clientes que no compraron el producto mas barato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/experto/ejercicio1_3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experto",
+								"ejercicio1_3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Mostrar total gastado por un cliente según el producto dado",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener clientes que gastaron mas que un monto dado en un producto ingresado",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener cliente que mas gastó en determinado producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/experto/ejercicio2_1?posProducto=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"experto",
+								"ejercicio2_1"
+							],
+							"query": [
+								{
+									"key": "posProducto",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
