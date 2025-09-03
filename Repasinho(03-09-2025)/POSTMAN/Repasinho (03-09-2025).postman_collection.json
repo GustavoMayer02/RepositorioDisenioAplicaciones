@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "a4af8c3a-4356-41b1-b3cc-10e67922d23c",
+		"name": "Repasinho (03-09-2025)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28687138"
+	},
+	"item": [
+		{
+			"name": "HOLA_MUNDO",
+			"item": [
+				{
+					"name": "200 - Saludar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/holamundo/saludar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"holamundo",
+								"saludar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GUÍA_CLIENTE",
+			"item": [
+				{
+					"name": "200 - Agregar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EJERCICIO_EXPERTO",
+			"item": [
+				{
+					"name": "200 - Verificar si un cliente compró determinado producto",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener clientes que no compraron el producto más barato",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener el cliente que gastó más en determinado producto",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener total gastado por un cliente en un producto dado",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Obtener clientes que gastaron más de un monto especificado en un producto determinado",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
