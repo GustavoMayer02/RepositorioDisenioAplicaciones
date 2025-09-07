@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador MVC</title>
+    <link rel="stylesheet" href="contador.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contador</h1>
+        <div class="counter-display">
+            <span id="counter-value">0</span>
+        </div>
+        <div class="controls">
+            <button id="btn-subtract" class="btn subtract">-</button>
+            <button id="btn-add" class="btn add">+</button>
+        </div>
+        <div class="message" id="message-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar la vista
+            inicializarVista();
+
+            // Configurar los botones
+            document.getElementById('btn-add').addEventListener('click', sumar);
+            document.getElementById('btn-subtract').addEventListener('click', restar);
+        });
+
+        // Función para inicializar la vista
+        function inicializarVista() {
+            fetch('/contador/inicializarVista', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => procesarRespuesta(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Función para sumar
+        function sumar() {
+            fetch('/contador/sumar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => procesarRespuesta(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Función para restar
+        function restar() {
+            fetch('/contador/restar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => procesarRespuesta(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Función para procesar las respuestas del servidor
+        function procesarRespuesta(respuestas) {
+            respuestas.forEach(respuesta => {
+                if (respuesta.id === 'valor') {
+                    document.getElementById('counter-value').textContent = respuesta.parametro;
+                } else if (respuesta.id === 'mensaje') {
+                    const messageContainer = document.getElementById('message-container');
+                    messageContainer.textContent = respuesta.parametro;
+                    messageContainer.style.opacity = 1;
+
+                    // Ocultar el mensaje después de 3 segundos
+                    setTimeout(() => {
+                        messageContainer.style.opacity = 0;
+                    }, 3000);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
