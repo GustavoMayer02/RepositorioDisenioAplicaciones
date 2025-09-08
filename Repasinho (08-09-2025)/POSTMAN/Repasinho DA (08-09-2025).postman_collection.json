@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "ae716647-dcf5-4851-99c9-3df0a7b08855",
+		"name": "Repasinho DA (08-09-2025)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28687138"
+	},
+	"item": [
+		{
+			"name": "GUÍAS",
+			"item": [
+				{
+					"name": "GUÍA CLIENTE",
+					"item": [
+						{
+							"name": "200 - Crear un nuevo cliente.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": ""
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EJERCICIOS",
+			"item": [
+				{
+					"name": "EJERCICIO NUMEROS",
+					"item": [
+						{
+							"name": "200 - Conectar vista.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/numeros/conectarVista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"numeros",
+										"conectarVista"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Iniciar programa.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/numeros/iniciar?cantidad=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"numeros",
+										"iniciar"
+									],
+									"query": [
+										{
+											"key": "cantidad",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/numeros/agregar?numero=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"numeros",
+										"agregar"
+									],
+									"query": [
+										{
+											"key": "numero",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EJERCICIO_EXPERTO",
+					"item": [
+						{
+							"name": "200 - Obtener producto más barato",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Determinar si el cliente compró o no un producto dado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio1_2?posCliente=1&posProducto=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio1_2"
+									],
+									"query": [
+										{
+											"key": "posCliente",
+											"value": "1"
+										},
+										{
+											"key": "posProducto",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Obtener clientes que no compraron el producto más barato",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio1_3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio1_3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Obtener cliente que gastó mas en X producto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio2_1?posProducto=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio2_1"
+									],
+									"query": [
+										{
+											"key": "posProducto",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Obtener total gastado cliente en un producto dado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio3_1?posCliente=1&posProducto=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio3_1"
+									],
+									"query": [
+										{
+											"key": "posCliente",
+											"value": "1"
+										},
+										{
+											"key": "posProducto",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Obtener clientes que gastaron mas que X monto en determinado producto.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/experto/ejercicio3_2?posProducto=0&monto=1000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"experto",
+										"ejercicio3_2"
+									],
+									"query": [
+										{
+											"key": "posProducto",
+											"value": "0"
+										},
+										{
+											"key": "monto",
+											"value": "1000"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EJERCICIO_USUARIOS_WEB",
+					"item": [
+						{
+							"name": "200 - Obtener todos los usuarios",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "200 - Obtener usuarios que tengan un acceso en minutos mayor al ingreso",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
