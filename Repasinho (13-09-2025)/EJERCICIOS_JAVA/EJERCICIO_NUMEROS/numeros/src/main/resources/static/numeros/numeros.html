@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Números</title>
+    <link rel="stylesheet" href="numeros.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Ingreso y Procesamiento de Números</h1>
+        </header>
+        <section class="cantidad-section">
+            <h2>1. Cantidad de Números</h2>
+            <form id="formIniciar">
+                <label for="cantidad">Ingrese la cantidad N de números:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+                <button type="submit">Aceptar</button>
+            </form>
+        </section>
+        <section class="ingreso-section">
+            <h2>2. Ingreso de Números</h2>
+            <form id="formAgregar">
+                <label for="numero">Ingrese un número:</label>
+                <input type="number" id="numero" name="numero" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section class="faltan-section">
+            <h2>3. Números Faltantes</h2>
+            <div id="faltan" class="faltan-info">
+                <span>Faltan <strong id="faltan">N</strong> números por ingresar.</span>
+            </div>
+        </section>
+        <section class="resultados-section">
+            <h2>4. Resultados</h2>
+            <div id="resultados" class="resultados-info">
+                <!-- Aquí se mostrarán los resultados -->
+            </div>
+        </section>
+        <section class="mensajes-section">
+            <h2>5. Mensajes</h2>
+            <div id="mensajes" class="mensajes-info">
+                <!-- Aquí se mostrarán los mensajes -->
+            </div>
+        </section>
+        <section class="errores-section">
+            <h2>6. Errores</h2>
+            <div id="errores" class="errores-info">
+                <!-- Aquí se mostrarán los errores -->
+            </div>
+        </section>
+    </div>
+
+    <script src="../utilesVista.js"></script>
+    <script src="../vistaWeb.js"></script>
+
+    <script>
+        urlIniciarVista = "/numeros/vistaConectada";
+        document.getElementById('formIniciar').addEventListener('submit', function (e) {
+            e.preventDefault();
+            iniciarProceso();
+        });
+
+        document.getElementById('formAgregar').addEventListener('submit', function (e) {
+            e.preventDefault();
+            agregarNumero();
+        });
+
+        function iniciarProceso() {
+            submit("/numeros/iniciar", serializarFormulario('formIniciar'));
+            document.getElementById('formIniciar').reset();
+        }
+
+        function agregarNumero() {
+            submit("/numeros/agregar", serializarFormulario('formAgregar'));
+            document.getElementById('formAgregar').reset();
+        }
+
+        function mostrar_faltan(valor) {
+            document.getElementById('faltan').textContent = valor;
+        }
+
+        function mostrar_mensaje(mensaje) {
+            document.getElementById('mensajes').textContent = mensaje;
+        }
+
+        function mostrar_error(error) {
+            document.getElementById('errores').textContent = error;
+        }
+
+        function mostrar_resultado(resultado) {
+            let html = `
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                </tr>
+            </thead>
+            <tbody>`;
+
+            resultado.forEach((numero) => {
+                html += `
+            <tr>
+                <td>${numero}</td>
+            </tr>`;
+            });
+
+            html += '</tbody></table>';
+            document.getElementById('resultados').innerHTML = html;
+        }
+
+
+    </script>
+</body>
+
+</html>

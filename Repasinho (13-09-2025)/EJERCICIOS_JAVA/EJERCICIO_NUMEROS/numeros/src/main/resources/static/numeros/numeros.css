@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px 40px 40px 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h1 {
+    color: #2a3b4c;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 18px 24px;
+    border-radius: 8px;
+    background: #f8fafc;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+
+section h2 {
+    color: #1a2533;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+input[type="number"] {
+    width: 120px;
+    padding: 7px 10px;
+    border: 1px solid #bfc9d1;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+input[type="number"]:focus {
+    border: 1.5px solid #2a7ae2;
+    outline: none;
+}
+
+button {
+    background: #2a7ae2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1a5bb8;
+}
+
+.faltan-info,
+.resultados-info,
+.mensajes-info {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    color: #2a3b4c;
+}
+
+.faltan-info strong {
+    color: #e67e22;
+    font-size: 1.1rem;
+}
+
+.resultados-info {
+    color: #16a085;
+}
+
+.mensajes-info {
+    color: #c0392b;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.results-table thead {
+    background-color: #f5f5f5;
+}
+
+.results-table th {
+    font-weight: bold;
+    color: #333;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-table tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
